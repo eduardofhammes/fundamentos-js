@@ -26,3 +26,11 @@ const palavra = 'Eduardo'
 for(let contador = 0; contador < palavra.length; contador++) {
   console.log(palavra[contador])  
 }
+
+// impressão de letras de uma palavra utilizando for...of
+const palavraDois = "exemplo";
+
+// for...of funciona para string, assim, a variavel caractere irá percorrer cada posição de palavraDois e imprimir no console
+for (const caractere of palavraDois) {
+  console.log(caractere);
+}
