@@ -48,6 +48,18 @@ console.log('Contagem finalizada!')
 // 📌 Observação:
 // Considere que o valor de numeroDigitado é alterado manualmente a cada repetição.
 
+let numeroCorreto = 0
+let numeroDigitado = 1
+
+do{
+
+    console.log('5. Seu número digitado foi:', numeroDigitado)
+    numeroDigitado = 0
+
+} while(numeroDigitado != numeroCorreto)
+
+console.log('5. Parabéns! Foi digitado o número correto -> ', numeroCorreto)
+
 // 6. Jogo do número secreto
 // Crie uma variável numeroSecreto com valor fixo.
 // Simule até 3 tentativas usando um for.
@@ -57,16 +69,49 @@ console.log('Contagem finalizada!')
 // "Tente novamente" se for diferente
 // 📌 Observação:
 // As tentativas devem ser simuladas por variáveis dentro do laço.
-// 
+
+const numeroSecreto = 15
+
+for(let i = 1; i <= 3; i++) {
+    let tentativa = 12
+
+    if(tentativa === numeroSecreto) {
+        console.log('6. Acertou!')
+    } else {
+        console.log('6. Tente novamente')
+    }
+}
+
 // 7. Idade ao longo dos anos
 // Crie uma variável anoNascimento e anoAtual. Use um for para listar a idade da pessoa ano a ano até o ano atual.
-// 
+
+const anoNascimento = 2004;
+const anoAtual = 2026
+
+for(let i = 1; i <= (anoAtual - anoNascimento); i++) {
+    console.log('7. Idade atual ->', i)
+}
+
 // 8. Listando números pares
 // Mostre todos os números pares entre 1 e 50 usando for.
-// 
+
+for (let i = 1; i <= 50; i++) {
+    if(i % 2 == 0){
+        console.log('8. Número par ->', i)
+    }
+}
+
 // 9. Contar múltiplos de 3 entre 1 e 100
 // Mostre no console quantos números entre 1 e 100 são divisíveis por 3.
-// 
+
+let multiplosDeTres = 0
+
+for(let i = 1; i <= 100; i++){
+    if(i % 3 === 0){
+        console.log('9. Esse número é divisível por três ->', i)
+    }
+}
+
 // 10. Menu com repetição
 // Crie uma variável opcao.
 // Use um do...while para exibir repetidamente as opções:
@@ -79,3 +124,16 @@ console.log('Contagem finalizada!')
 // 
 // 📌 Observação:
 // A escolha da opção deve ser simulada por valores atribuídos à variável opcao.
+
+let opcao = 3;
+let opcaoDigitada = 2;
+
+do{
+    console.log('Você está no menu principal!')
+    console.log('')
+    console.log('1 - Ver saldo')
+    console.log('2 - Fazer depósito')
+    console.log('3 - Sair')
+
+    opcaoDigitada = 3
+} while(opcao != opcaoDigitada) 
