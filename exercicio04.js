@@ -80,11 +80,34 @@ console.log('6. A soma é:', resultadoSoma)
 //retornar o valor calculado
 //Depois, utilize o retorno da função para exibir o valor do troco no console.
 
+function calcularTroco(valorCompra, valorPago) {
+    if (valorPago > valorCompra) {
+        return valorPago - valorCompra;
+    }
+    else {
+        return 'Não há troco a ser devolvido'
+    }
+}
+
+const troco = calcularTroco(25, 26)
+console.log('7.', troco)
+
 //8. Arrow function
 //Transforme a função do exercício 6 em uma arrow function com sintaxe reduzida.
+
+const troco2 = (valorCompra, valorPago) => valorPago > valorCompra ? valorPago - valorCompra : 'Não há valor a ser devolvido'
+
+console.log('8.', troco2(30, 30))
 
 //9. Callback simples
 //Crie uma função executarAcao(acao) que recebe uma função como parâmetro e a executa. Teste passando uma função que imprime "Executando ação!".
 
-//10. Desafio do quiz
-//Crie uma função fazerPergunta(pergunta, respostaCorreta). A função deve exibir a pergunta e depois mostrar se a resposta está certa ou errada (simule a resposta com uma variável).
+function acao() {
+    console.log('Executando ação!')
+}
+
+function executarAcao(minhaFuncao) {
+    minhaFuncao();
+}
+
+executarAcao(acao)
