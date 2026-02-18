@@ -12,6 +12,7 @@ console.log(nome)
 console.log(idade)
 
 // criando função de saudacao, que recebe apenas a propriedade nome de um objeto, como podemos identificar por { nome }
+// funcao com destructuring 
 function saudacao({ nome, idade }) {
     console.log('Olá,', nome)
     if (idade > 17) {
